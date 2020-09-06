@@ -10,9 +10,7 @@ function getResults() {
 
 getResults()
   .then(body => {
-    //console.log(body)
     const $ = cheerio.load(body);
-    //console.log($);
     $('.ipc-poster-card__title').each(function(i, element) {
       const $element = $(element);
       console.log($element.text())
