@@ -1,13 +1,20 @@
 const fetch = require('node-fetch');
+const cheerio = require('cheerio');
 
-const url = 'https://www.reddit.com/r/cassetteculture/top/?sort=top&t=all';
+const url = 'https://www.imdb.com/';
 
-function searchReddit() {
+function getResults() {
   return fetch(url)
     .then(response => response.text());
 }
 
-searchReddit()
+getResults()
   .then(body => {
-    console.log(body);
-  });
+    //console.log(body)
+    const $ = cheerio.load(body);
+    //console.log($);
+    $('.ipc-poster-card__title').each(function(i, element) {
+      const $element = $(element);
+      console.log($element.text())
+    })
+  })
