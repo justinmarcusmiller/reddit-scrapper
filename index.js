@@ -10,8 +10,8 @@ const url = `https://${city}.craigslist.org/search/sss?query=${searchTerm}&sort=
 
 // If user entered invalid parameters, the program will close
 if (process.argv[2] == null || process.argv[3] == null) {
-  console.log("INVALID ARGUMENTS");
-  console.log("node index.js city searchTerm");
+  console.log("INVALID PARAMETERS");
+  console.log("CORRECT USAGE: node index.js (city searchTerm)");
   process.exit();
 }
 
