@@ -6,6 +6,6 @@ Displays items for sale on craigslist in the console
 
 ## Usage
 
-`node index.js` *`city`* *`search-term`*
+`node web-scrapper.js` *`city`* *`search-term`*
 
 **Example:** `node index.js sfbay computers`
