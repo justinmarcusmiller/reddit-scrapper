@@ -33,7 +33,6 @@ getResults()
     const $ = cheerio.load(body);
     $('.result-title').each(function(i, element) {
       const $element = $(element);
-      //console.log($('.result-title')) + " | " + $('.result-meta').eq(i).find('.result-price').text() + " | " + )
       let result = `{"title":"${$('.result-title').eq(i).text()}","price":"${$('.result-meta').eq(i).find('.result-price').text()}","postLink":"${$('.result-info').eq(i).find('a').attr('href')}","location":"${$('.result-hood').eq(i).text()}"`;
       results.push(result);
     })
