@@ -8,4 +8,4 @@ Displays items for sale on craigslist in the console
 
 `node web-scrapper.js` *`city`* *`search-term`*
 
-**Example:** `node index.js sfbay computers`
+**Example:** `node web-scrapper.js sfbay computers`
